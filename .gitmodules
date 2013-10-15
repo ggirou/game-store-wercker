@@ -1,0 +1,3 @@
+[submodule "game-store"]
+	path = game-store
+	url = git@github.com:ggirou/game-store.git
