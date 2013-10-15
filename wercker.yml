@@ -2,16 +2,15 @@ box: wercker/dart@0.0.1-dev5
 build:
   steps:
     - script:
-        name: change dir
-        code: |
-          cd game-store
-    - script:
         name: install
         code: |
+          cd game-store
+          pwd
           pub install
     - script:
         name: build
         code: |
+          cd game-store
           dart build.dart --deploy && cp pubspec.yaml out/
           cd out && pub deploy
           cd ..
